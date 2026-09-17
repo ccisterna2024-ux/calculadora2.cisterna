@@ -13,11 +13,13 @@ class CalculadoraApp(App):
         self.operacion = ""
 
     def presionar_boton(self, texto):
+
         if texto == "=":
             try:
                 resultado = eval(self.operacion)
                 self.root.ids.pantalla.text = str(resultado)
                 self.operacion = str(resultado)
+
             except:
                 self.root.ids.pantalla.text = "Error"
                 self.operacion = ""
